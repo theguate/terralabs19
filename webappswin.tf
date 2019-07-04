@@ -1,5 +1,5 @@
-resource "azurerm_resource_group" "webapps" {
-    name        = "webapps"
+resource "azurerm_resource_group" "webappswin" {
+    name        = "webappswin"
     location    = "${var.loc}"
     tags        = "${var.tags}"
 }
@@ -16,8 +16,8 @@ resource "azurerm_app_service_plan" "free" {
     count               = "${length(var.webapplocs)}"
     name                = "plan-free-${var.webapplocs[count.index]}"
     location            = "${var.webapplocs[count.index]}"
-    resource_group_name = "${azurerm_resource_group.webapps.name}"
-    tags                = "${azurerm_resource_group.webapps.tags}"
+    resource_group_name = "${azurerm_resource_group.webappswin.name}"
+    tags                = "${azurerm_resource_group.webappswin.tags}"
     kind                = "Windows"
     sku {
       tier = "Free"
@@ -29,8 +29,8 @@ resource "azurerm_app_service" "citadel" {
     count               = "${length(var.webapplocs)}"
     name                = "webapp-${random_string.webapprnd.result}-${var.webapplocs[count.index]}"
     location            = "${var.webapplocs[count.index]}"
-    resource_group_name = "${azurerm_resource_group.webapps.name}"
-    tags                = "${azurerm_resource_group.webapps.tags}"
+    resource_group_name = "${azurerm_resource_group.webappswin.name}"
+    tags                = "${azurerm_resource_group.webappswin.tags}"
 
     app_service_plan_id = "${element(azurerm_app_service_plan.free.*.id, count.index)}"
 }
