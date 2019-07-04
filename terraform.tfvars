@@ -7,8 +7,8 @@ tags = {
 
 webapplocs = [ 
     "westeurope",
-    "southeastasia",
-    "westus",
+    "centralindia",
+    "westus2",
     "australiaeast",
     "brazilsouth"
     ]
