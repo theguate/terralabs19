@@ -1,3 +1,4 @@
+/*
 resource "azurerm_resource_group" "keyvaults" {
     name        = "keyVaults"
     location    = "${var.loc}"
@@ -44,3 +45,4 @@ resource "azurerm_key_vault" "default" {
     enabled_for_template_deployment = false # ARM deployments allowed to pull secrets?
     enabled_for_disk_encryption     = true  # Azure Disk Encryptions permitted to grab secrets and unwrap keys ?
 }
+*/
