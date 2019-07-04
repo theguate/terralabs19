@@ -1,7 +1,7 @@
 loc  = "westeurope"
 
 tags = {
-    source = "citadel"
+    source = "javier-tags"
     env = "training"
     }
 
