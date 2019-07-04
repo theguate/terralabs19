@@ -20,11 +20,9 @@ resource "azurerm_app_service_plan" "free" {
     tags                = "${azurerm_resource_group.webapps.tags}"
 
     kind                = "Linux"
-    reserved            = true
-
     sku {
-      tier = "Free"
-      size = "F1"
+        tier = "Free"
+        size = "F1"
     }
 }
 
