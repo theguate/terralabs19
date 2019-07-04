@@ -4,7 +4,7 @@ tags = {
     source = "javier-tags"
     env = "training"
     }
-
+/* 
 webapplocs = [ 
     "westeurope",
     "southeastasia",
@@ -12,3 +12,4 @@ webapplocs = [
     "australiaeast",
     "brazilsouth"
     ]
+*/
