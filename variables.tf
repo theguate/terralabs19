@@ -1,15 +1,17 @@
-variable "rg" {
-    default = "terraform-lab2"
-}
-
 variable "loc" {
-    default = "West Europe"
+    description = "Default Azure region"
+    default     =   "westeurope"
 }
 
 variable "tags" {
-    type = "map"
-    default = {
-        environment = "training"
-        source      = "javier-tags"
+    default     = {
+        source  = "javier-tags"
+        env     = "training"
     }
+}
+
+variable "webapplocs" {
+    description = "List of locations for web apps"
+    type        = "list"
+    default     = []
 }
