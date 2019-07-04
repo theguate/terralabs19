@@ -10,6 +10,6 @@ variable "tags" {
     type = "map"
     default = {
         environment = "training"
-        source      = "citadel"
+        source      = "javier-tags"
     }
 }
