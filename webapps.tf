@@ -24,6 +24,9 @@ resource "azurerm_app_service_plan" "free" {
         tier = "Free"
         size = "F1"
     }
+    properties {
+    reserved = true
+  }
 }
 
 resource "azurerm_app_service" "citadel" {
