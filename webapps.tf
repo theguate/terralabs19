@@ -18,6 +18,7 @@ resource "azurerm_app_service_plan" "free" {
     location            = "${var.webapplocs[count.index]}"
     resource_group_name = "${azurerm_resource_group.webapps.name}"
     tags                = "${azurerm_resource_group.webapps.tags}"
+
     kind                = "Windows"
     sku {
         tier = "Free"
