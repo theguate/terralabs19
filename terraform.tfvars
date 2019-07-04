@@ -1,14 +1,14 @@
 loc  = "westeurope"
 
 tags = {
-    source = "javier-tags"
+    source = "citadel"
     env = "training"
     }
 
 webapplocs = [ 
     "westeurope",
-    "southeastasia",
-    "northeurope",
+    "centralindia",
+    "westus2",
     "australiaeast",
     "brazilsouth"
     ]

@@ -5,7 +5,7 @@ variable "loc" {
 
 variable "tags" {
     default     = {
-        source  = "javier-tags"
+        source  = "citadel"
         env     = "training"
     }
 }
