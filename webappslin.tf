@@ -22,8 +22,8 @@ resource "azurerm_app_service_plan" "free" {
     kind                = "Linux"
     reserved            = true
     sku {
-    tier = "Standard"
-    size = "S1"
+    tier = "Free"
+    size = "F1"
   }
 }
 
