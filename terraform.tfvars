@@ -1,8 +1,8 @@
 loc  = "westeurope"
 
 tags = {
-    source = "citadel"
-    env = "training"
+    source = "javierterra-tags"
+    env = "terra-tags"
     }
 
 webapplocs = [ 
