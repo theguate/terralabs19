@@ -10,6 +10,6 @@ webapplocs = [
     "northeurope",
     "southeastasia",
     "westus",
-    "australiaeast"
-    #"brazilsouth"
+    "australiaeast",
+    "brazilsouth"
     ]
