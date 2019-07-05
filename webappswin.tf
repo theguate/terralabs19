@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "webappswin" {
     tags        = "${var.tags}"
 }
 
-resource "random_string" "webapprnd" {
+resource "random_string" "webapprndwin" {
   length  = 8
   lower   = true
   number  = true
@@ -12,9 +12,9 @@ resource "random_string" "webapprnd" {
   special = false
 }
 
-resource "azurerm_app_service_plan" "free" {
+resource "azurerm_app_service_plan" "freewin" {
     count               = "${length(var.webapplocs)}"
-    name                = "plan-free-${var.webapplocs[count.index]}"
+    name                = "plan-free-win${var.webapplocs[count.index]}"
     location            = "${var.webapplocs[count.index]}"
     resource_group_name = "${azurerm_resource_group.webappswin.name}"
     tags                = "${azurerm_resource_group.webappswin.tags}"
@@ -25,9 +25,9 @@ resource "azurerm_app_service_plan" "free" {
     }
 }
 
-resource "azurerm_app_service" "citadel" {
+resource "azurerm_app_service" "citadelwin" {
     count               = "${length(var.webapplocs)}"
-    name                = "webapp-${random_string.webapprnd.result}-${var.webapplocs[count.index]}"
+    name                = "webapp-${random_string.webapprndwin.result}-${var.webapplocs[count.index]}"
     location            = "${var.webapplocs[count.index]}"
     resource_group_name = "${azurerm_resource_group.webappswin.name}"
     tags                = "${azurerm_resource_group.webappswin.tags}"
@@ -35,6 +35,6 @@ resource "azurerm_app_service" "citadel" {
     app_service_plan_id = "${element(azurerm_app_service_plan.free.*.id, count.index)}"
 }
 
-output "webapp_ids" {
+output "webappswin_ids" {
   value = "${azurerm_app_service.citadel.*.id}"
 }
