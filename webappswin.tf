@@ -27,7 +27,7 @@ resource "azurerm_app_service_plan" "freewin" {
 
 resource "azurerm_app_service" "citadelwin" {
     count               = "${length(var.webapplocs)}"
-    name                = "webapp-${random_string.webapprndwin.result}-${var.webapplocs[count.index]}"
+    name                = "webappwin-${random_string.webapprndwin.result}-${var.webapplocs[count.index]}"
     location            = "${var.webapplocs[count.index]}"
     resource_group_name = "${azurerm_resource_group.webappswin.name}"
     tags                = "${azurerm_resource_group.webappswin.tags}"
