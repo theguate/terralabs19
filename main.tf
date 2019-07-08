@@ -1,6 +1,6 @@
 module "scaffold" {
-    source    = "https://github.com/theguate/terraform-module-scaffold/"
-   #source    = "/Users/javier/Documents/terraform-labs/terraform-module-scaffold"
+   # source    = "https://github.com/theguate/terraform-module-scaffold/"
+   source    = "/Users/javier/Documents/terraform-labs/terralabs19/module-scaffold"
 }
 
 resource "azurerm_resource_group" "webapps" {
@@ -8,6 +8,7 @@ resource "azurerm_resource_group" "webapps" {
     location    = "${var.loc}"
     tags        = "${var.tags}"
 }
+
 
 resource "random_string" "webapprnd" {
   length  = 8
