@@ -1,3 +1,6 @@
+module "scaffold" {
+  source    = "https://github.com/theguate/terraform-module-scaffold"
+
 resource "azurerm_resource_group" "webapps" {
     name        = "webapps"
     location    = "${var.loc}"
