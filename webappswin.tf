@@ -32,7 +32,7 @@ resource "azurerm_app_service" "citadelwin" {
     resource_group_name = "${azurerm_resource_group.webappswin.name}"
     tags                = "${azurerm_resource_group.webappswin.tags}"
 
-    app_service_plan_id = "${element(azurerm_app_service_plan.free.*.id, count.index)}"
+    app_service_plan_id = "${element(azurerm_app_service_plan.freewin.*.id, count.index)}"
 }
 
 output "webappswin_ids" {
