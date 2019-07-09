@@ -2,7 +2,7 @@ loc  = "westeurope"
 
 tags = {
     source = "javierterra-tags"
-    env = "terra-tags"
+    env = "apps-tags"
     }
 
 webapplocs = [ 
