@@ -6,7 +6,7 @@ variable "loc" {
 variable "tags" {
     default     = {
         source  = "javierterra-tags"
-        env     = "terra-tags"
+        env     = "apps-tags"
     }
 }
 
